@@ -16,3 +16,4 @@ Welcome, to Python 3.11
 """In command palet type Python: Create Environment"""
 # PATH
 "~\Documents\GitHub\reg_exp\info.py"
+# RUN
