@@ -1,6 +1,6 @@
 
 
-# Regular Expressionss
+# Regular Expressions
 """Copilot"""
 # Regular expressions are a powerful tool for various kinds of string manipulation. They are a domain specific language (DSL) that is present as a library in most modern programming languages, not just Python. They are useful for two main tasks:
 #
