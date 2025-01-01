@@ -222,3 +222,45 @@ for movie in movies:
         print(movie.replace("actor actor actor", "actor"))
 
 
+"""
+Finding Substrings:
+The .find() method searches for a specified substring and returns the lowest index where it is found. If not found, it returns -1.
+The .index() method works similarly to .find() but raises an exception if the substring is not found. This can be handled using a try-except block.
+
+Counting Substrings:
+The .count() method returns the number of non-overlapping occurrences of a substring within the target string.
+
+Replacing Substrings:
+The .replace() method replaces occurrences of a substring with a new substring. You can specify how many occurrences to replace.
+"""
+
+
+
+# Import class datetime from datetime 
+from datetime import datetime
+
+# Assign date to get_date
+get_date = datetime.now()
+
+# Add named placeholders with format specifiers
+message = "Good morning. Today is {today:%B %d, %Y}. It's {today:%H:%M} ... time to work!"
+
+# Use the format method replacing the placeholder with get_date
+print(message.format(today=get_date))
+
+
+o = "I am a string"
+print(f"{o!r}"+f" {o!s} "+f"{o!a}") # !r calls repr(), !s calls str(), !a calls ascii()
+# :e :d :.2f is for scientific notation, (d) decimal, and (f) float
+
+# ACCESING DATETIME OBJECT ATTRIBUTES
+west = {'date': datetime.datetime(2006, 5, 26, 0, 0), 'price': 1432673}
+print(f"The price for a house in the west neighborhood was ${west['price']} in {west['date']:%m-%d-%Y}.") #kinda like :.2f 
+
+
+
+# TEMPLATE STRINGS:
+from string import Template
+temp = Template("Template example with placeholder : $placeholder")
+sub = "***"
+print(temp.substitute(placeholder=sub))
