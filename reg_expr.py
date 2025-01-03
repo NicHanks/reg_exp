@@ -264,3 +264,35 @@ from string import Template
 temp = Template("Template example with placeholder : $placeholder")
 sub = "***"
 print(temp.substitute(placeholder=sub))
+
+
+
+
+
+# REGULAR EXPRESSIONS FOR PATTERN MATCHING
+import re #search, match, and manipulate strings using regex patterns
+string = "all is one but two ... all"
+re.findall(r"all",string) #returns a list of strings each time it is found
+re.split(r"a",string) #returns a list of strings split (excludes the a)
+re.sub(r"ll","lso",string) 
+re.findall(r"User\d", "The winners are: User9, usern, UserD, userJ") #supported metacharacters \d digit
+re.findall(r"User\D", "The winners are: User9, usern, UserD, user8") #\D non-digit
+re.findall(r"\W\d","ice cream costed $5")  #\w word
+re.findall(r"\w\d","this skirt is on sale! Only $5 dollars today!")  #\W non-word && digit
+re.findall(r"Data\sScience","I enjoy learning Data Science") #\s whitespace
+re.sub(r"ice\Scream","ice cream", "i luve ice-cream") #\S no-whitespace. 
+# * zero or more times
+# + once or more
+# ? zero or once
+# Tokenization is the process of breaking a string into lexical units or, in simpler terms, words. 
+sentiment_analysis = "ITS NOT ENOUGH TO SAY THAT IMISS U #MissYou #SoMuch #Friendship #Forever"
+regex = r"#\w+"
+no_hashtag = re.sub(regex, "", sentiment_analysis)
+print(re.split(r"\s+", no_hashtag))
+# Periods are used to match any character (except newline)
+my_links = "Just check out this link: www.amazingpics.com. It has amazing photos!"
+re.findall(r"www.+com", my_Links) #['www.amazingpics.com']
+re.search(r"www.+com", my_Links) #<re.Match object; span=(23, 40), match='www.amazingpics.com
+re.match(r"www.+com", my_Links) #None because it only matches the start of the string. 
+# \. is used to escape the period character in the regex, ^ is used to match the start of a string, and $ is used to match the end of a string.
+
